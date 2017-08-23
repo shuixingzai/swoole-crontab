@@ -41,8 +41,8 @@ if ($env == "product")
 
 define('ENV_NAME', $env);
 
-define('PUBLIC_PATH', '/data/www/public/');
-require_once PUBLIC_PATH.'framework/libs/lib_config.php';
+define('PUBLIC_PATH', '/mnt/task/src/framework/swoole/');
+require_once PUBLIC_PATH.'libs/lib_config.php';
 
 Swoole::$php->config->setPath(__DIR__ . '/configs/' . ENV_NAME);//共有配置
 Swoole::$php->config->setPath(__DIR__ . '/configs');//共有配置

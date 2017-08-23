@@ -13,19 +13,19 @@ $env = get_cfg_var('env.name');
 if ($env == "product")
 {
     define('DEBUG', 'off');
-    define('WEBROOT', 'http://crontab.oa.com');
+    define('WEBROOT', 'http://atask.9xkd.com');
 }elseif ($env == "test"){
     define('DEBUG', 'on');
-    define('WEBROOT', 'http://crontab.oa.com');
+    define('WEBROOT', 'http://atask.9xkd.com');
 } else {
     $env = 'dev';
     define('DEBUG', 'on');
-    define('WEBROOT', 'http://crontab.oa.com');
+    define('WEBROOT', 'http://atask.9xkd.com');
 }
 define('ENV_NAME', $env);
 
-define('PUBLIC_PATH', '/data/www/public/');
-require_once PUBLIC_PATH.'framework/libs/lib_config.php';
+define('PUBLIC_PATH', '/mnt/task/src/framework/swoole/');
+require_once PUBLIC_PATH.'libs/lib_config.php';
 
 Swoole::$php->config->setPath(APPSPATH . '/configs');
 Swoole::$php->config->setPath(APPSPATH . '/configs/' . ENV_NAME);
